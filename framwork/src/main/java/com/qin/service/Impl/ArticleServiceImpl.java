@@ -1,6 +1,5 @@
 package com.qin.service.Impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -11,6 +10,7 @@ import com.qin.domain.entity.Article;
 import com.qin.domain.entity.Category;
 import com.qin.domain.vo.HotArticleVo;
 import com.qin.domain.vo.PageVo;
+import com.qin.domain.vo.articleDetailVo;
 import com.qin.mapper.ArticleMapper;
 import com.qin.service.ArticleService;
 import com.qin.service.CategoryService;
@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
@@ -75,5 +74,21 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         List<Article> articleListVos = BeanCopyUtils.copyBeanList(page.getRecords(), Article.class);
         PageVo pageVo = new PageVo(articleListVos, page.getTotal());
         return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult getArticleDetail(Long id) {
+        //根据id查文章
+        Article article = getById(id);
+        //转换成Vo
+        articleDetailVo articleDetailVo = BeanCopyUtils.copyBean(article, articleDetailVo.class);
+        //根据分类id查询分类名
+        Long categoryId = articleDetailVo.getCategoryId();
+        Category category = categoryService.getById(categoryId);
+        if (category!=null){
+            articleDetailVo.setCategoryName(category.getName());
+        }
+        //封装响应返回
+        return ResponseResult.okResult(articleDetailVo);
     }
 }

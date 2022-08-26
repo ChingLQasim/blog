@@ -22,5 +22,9 @@ public class SystemConstants
     分类正在编辑状态
      */
     public static final String CATEGORY_STATUS_DRFT = "0";
+    /*
+    友链审核状态通过
+     */
+    public static final String LINK_STATUS_NORMAL = "0";
 
 }
