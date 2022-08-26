@@ -1,4 +1,4 @@
-package com.qin.config;
+package com.qin.domain.other.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;

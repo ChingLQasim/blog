@@ -1,4 +1,4 @@
-package com.qin.config;
+package com.qin.domain.other.config;
 
 import com.alibaba.fastjson.serializer.SerializeConfig;
 import com.alibaba.fastjson.serializer.SerializerFeature;
