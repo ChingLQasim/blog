@@ -1,6 +1,9 @@
 package com.qin.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.qin.domain.entity.User;
+import com.qin.mapper.UserMapper;
+import com.qin.service.UserService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,6 +13,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-08-26 16:39:49
  */
 @Service("sysUserService")
-public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
 }

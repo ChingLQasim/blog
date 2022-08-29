@@ -1,7 +1,8 @@
 package com.qin.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.qin.domain.entity.SysUser;
+import com.qin.domain.entity.User;
+import org.apache.ibatis.annotations.Mapper;
 
 
 /**
@@ -10,7 +11,7 @@ import com.qin.domain.entity.SysUser;
  * @author qinli
  * @since 2022-08-26 16:40:53
  */
-public interface SysUserMapper extends BaseMapper<SysUser> {
+public interface UserMapper extends BaseMapper<User> {
 
 }
 
