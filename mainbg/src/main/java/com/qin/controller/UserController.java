@@ -1,20 +1,19 @@
 package com.qin.controller;
 
 import com.qin.domain.ResponseResult;
-import com.qin.service.LinkService;
+import com.qin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/link")
-public class LinkContoller {
+@RequestMapping("/user")
+public class UserController {
     @Autowired
-    private LinkService linkService;
-
-    @GetMapping("getAllLink ")
-    public ResponseResult getAllLink(){
-        return linkService.getAllLink();
+    private UserService userService;
+    @GetMapping("userInfo")
+    public ResponseResult userInfo() {
+        return userService.getUserInfo();
     }
 }

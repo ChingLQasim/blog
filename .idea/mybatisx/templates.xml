@@ -15,7 +15,7 @@
             <option name="ignoreFieldSuffix" value="" />
             <option name="ignoreTablePrefix" value="" />
             <option name="ignoreTableSuffix" value="" />
-            <option name="moduleName" value="framwork" />
+            <option name="moduleName" value="framework" />
             <option name="modulePath" value="$PROJECT_DIR$" />
             <option name="moduleUIInfoList">
               <list>
@@ -54,7 +54,7 @@
             <option name="useLombokPlugin" value="true" />
           </GenerateConfig>
         </option>
-        <option name="moduleName" value="framwork" />
+        <option name="moduleName" value="framework" />
         <option name="projectPath" value="$PROJECT_DIR$" />
         <option name="templateName" value="default-empty" />
       </TemplateContext>

@@ -1,6 +1,7 @@
 package com.qin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.qin.domain.ResponseResult;
 import com.qin.domain.entity.User;
 
 
@@ -12,4 +13,5 @@ import com.qin.domain.entity.User;
  */
 public interface UserService extends IService<User> {
 
+    ResponseResult getUserInfo();
 }

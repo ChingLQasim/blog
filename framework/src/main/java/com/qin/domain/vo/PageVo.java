@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PageVo {
-    private List<Article>  rows;
+public class PageVo <T>{
+    private List<T>  rows;
     private Long total;
 }
